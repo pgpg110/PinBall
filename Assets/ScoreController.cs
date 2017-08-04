@@ -17,7 +17,7 @@ public class ScoreController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.scoreText.GetComponent<Text> ().text = score + "点";
+		
 	}
 
 	void OnCollisionEnter(Collision other){
@@ -30,5 +30,6 @@ public class ScoreController : MonoBehaviour {
 		} else if (other.gameObject.tag == "LargeCloudTag") {
 			score += 25;
 		}
+		this.scoreText.GetComponent<Text> ().text = score + "点";
 	}
 }
